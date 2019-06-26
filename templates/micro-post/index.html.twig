@@ -8,7 +8,7 @@
 
     {% for post in posts %}
         <a href="{{ path('micro_post_post', {'id': post.id}) }}">
-            {{ include('micro-post/post.html.twig', { 'post': post }) }}
+            {{ include('micro-post/raw-post.html.twig', { 'post' : post }) }}
         </a>
     {% endfor %}
 {% endblock %}
