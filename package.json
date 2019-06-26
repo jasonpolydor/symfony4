@@ -1,0 +1,32 @@
+{
+  "name": "symfony4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "holderjs": "^2.9.6",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.27.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonpolydor/symfony4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonpolydor/symfony4/issues"
+  },
+  "homepage": "https://github.com/jasonpolydor/symfony4#readme"
+}

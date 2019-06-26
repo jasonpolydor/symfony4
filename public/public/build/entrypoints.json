@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "js/app": {
+      "js": [
+        "/build/js/app.js"
+      ]
+    }
+  }
+}
