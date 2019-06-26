@@ -7,4 +7,11 @@
         <p>{{ post.date | date('H:i:s') }}</p>
         <p>{{ 560 | price}}</p>
         <p>Here is the current locale {{ locale }}</p>
+        <p>Injected in constructor {{ service_message }}</p>
+        <p>Under Globals in dev/twig.html {{ message }}</p>
+        <p>Env: {{ app.environment }}</p>
+        <p>User: {{ app.user }}</p>
+        <p>Request: {{ app.request }}</p>
+        <p>Session started: {{ app.session.isStarted }}</p>
+        <p>Debug: {{ app.debug }}</p>
 {% endblock %}

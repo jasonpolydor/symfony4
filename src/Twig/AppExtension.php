@@ -20,11 +20,16 @@ class AppExtension extends AbstractExtension implements GlobalsInterface
      * @var string
      */
     private $locale;
+    /**
+     * @var string
+     */
+    private $service_message;
 
-    public function __construct(string $locale)
+    public function __construct(string $locale, string $service_message)
     {
 
         $this->locale = $locale;
+        $this->service_message = $service_message;
     }
 
     public function getFilters()
@@ -37,7 +42,8 @@ class AppExtension extends AbstractExtension implements GlobalsInterface
     public function getGlobals()
     {
        return [
-           'locale' => $this->locale
+           'locale' => $this->locale,
+           'service_message' => $this->service_message
        ];
     }
 
