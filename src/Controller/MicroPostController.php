@@ -82,6 +82,20 @@ class MicroPostController extends AbstractController
 
             return new RedirectResponse($this->router->generate('micro_post_index'));
         }
-        return $this->render('micro-post/add.html.twig',[ 'form'=> $form->createView()]);
+        return $this->render('micro-post/add.html.twig',
+            [ 'form'=> $form->createView()
+            ]);
     }
+
+    /**
+     * @Route("/{id}", name="micro_post_post")
+     */
+    public function post($id){
+        $post = $this->microPostRepository->find($id);
+
+        return $this->render('micro-post/post.html.twig',
+            ['post' => $post]);
+    }
+
+
 }
