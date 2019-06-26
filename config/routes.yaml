@@ -3,6 +3,6 @@
 #    controller: App\Controller\DefaultController::index
 
 
-blog_index:
-  path: /blog
-  controller: App\Controller\BlogController::index
+#blog_index:
+#  path: /blog
+#  controller: App\Controller\BlogController::index
