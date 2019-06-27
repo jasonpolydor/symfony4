@@ -59,7 +59,7 @@ class MicroPostController extends AbstractController
      */
     public function index(){
         return $this->render('micro-post/index.html.twig',
-            ['posts' => $this->microPostRepository->findAll()]);
+            ['posts' => $this->microPostRepository->findBy([],['time' => 'DESC'])]);
     }
 
     /**
