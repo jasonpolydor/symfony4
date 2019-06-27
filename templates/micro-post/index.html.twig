@@ -10,5 +10,9 @@
         <a href="{{ path('micro_post_post', {'id': post.id}) }}">
             {{ include('micro-post/raw-post.html.twig', { 'post' : post }) }}
         </a>
+
+        <small class="d-block text-right mt-3">
+            <a href="{{ path('micro_post_edit', {'id': post.id}) }}">Edit</a>
+        </small>
     {% endfor %}
 {% endblock %}

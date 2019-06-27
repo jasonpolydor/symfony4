@@ -63,6 +63,28 @@ class MicroPostController extends AbstractController
     }
 
     /**
+     * @Route("/edit/{id}", name="micro_post_edit")
+     */
+    public function edit(MicroPost $microPost, Request $request){
+        $form = $this->formFactory->create(
+            MicroPostType::class,
+            $microPost
+        );
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $this->em->persist($microPost);
+            $this->em->flush();
+
+            return new RedirectResponse($this->router->generate('micro_post_index'));
+        }
+        return $this->render('micro-post/add.html.twig',
+            [ 'form'=> $form->createView()
+            ]);
+    }
+
+    /**
      * @Route("/add", name="micro_post_add")
      */
     public function add(Request $request){
